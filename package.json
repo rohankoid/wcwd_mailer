@@ -1,0 +1,31 @@
+{
+  "name": "wcwd_mailer",
+  "version": "1.0.0",
+  "description": "Connects with firebase db and sends email using a cron job ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohankoid/wcwd_mailer.git"
+  },
+  "keywords": [
+    "wcwd",
+    "mailer"
+  ],
+  "author": "Rohan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohankoid/wcwd_mailer/issues"
+  },
+  "homepage": "https://github.com/rohankoid/wcwd_mailer",
+  "dependencies": {
+    "cron": "^1.1.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "firebase": "^3.0.5",
+    "giphy": "0.0.4",
+    "nodemailer": "^2.1.0"
+  }
+}
