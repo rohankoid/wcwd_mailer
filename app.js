@@ -14,7 +14,7 @@ app.set('port', (process.env.PORT || 5000));app.get('/', function(request, respo
     //the rest of our app lives here, wrapped inside this function
      });
 
-new CronJob('28 16 * * *', function () {
+new CronJob('35 14 * * *', function () {
     giphy.search({
         q: 'giraffes',
         limit: 100,
