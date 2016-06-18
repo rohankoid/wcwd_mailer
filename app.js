@@ -14,7 +14,7 @@ app.set('port', (process.env.PORT || 5000));app.get('/', function(request, respo
     //the rest of our app lives here, wrapped inside this function
      });
 
-new CronJob('30 8 * * *', function () {
+new CronJob('28 16 * * *', function () {
     giphy.search({
         q: 'giraffes',
         limit: 100,
@@ -24,7 +24,7 @@ new CronJob('30 8 * * *', function () {
         var gif = gifs[Math.floor(Math.random() * gifs.length)];
         smtpTransport.sendMail({
             from: process.env.MY_EMAIL, // sender address
-            to: "negishivs@gmail.com", // receiver address
+            to: "rohanmaleku@gmail.com", // receiver address
             subject: "DAILY GIF ✔", // subject
             text: gif.images.downsized_large.url // body
         }, function (error, response) {
