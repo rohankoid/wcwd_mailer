@@ -3,8 +3,9 @@ var express = require('express'),
     app = express(),
     giphy = require('giphy')('dc6zaTOxFJmzC'),
     nodemailer = require("nodemailer"),
-    CronJob = require('cron').CronJob;
-
+    CronJob = require('cron').CronJob,
+    firebase = require('firebase'),
+    config = require('./config');
 
 app.set('port', (process.env.PORT || 5000));app.get('/', function(request, response) {
     var result = 'App is running'
@@ -14,7 +15,16 @@ app.set('port', (process.env.PORT || 5000));app.get('/', function(request, respo
     //the rest of our app lives here, wrapped inside this function
      });
 
-new CronJob('35 14 * * *', function () {
+firebase.initializeApp(config.config());
+var db = firebase.database();
+var ref = db.ref("/users");
+ref.once("value", function (snapshot) {
+    var users = snapshot.val();
+    console.log(users);
+})
+
+
+new CronJob('44 16 * * *', function () {
     giphy.search({
         q: 'giraffes',
         limit: 100,
@@ -35,7 +45,7 @@ new CronJob('35 14 * * *', function () {
             }
         });
     });
-}, null, true, 'America/New_York');
+}, null, true, 'Europe/Berlin');
 
 var smtpTransport = nodemailer.createTransport("SMTP", {
     service: "Gmail",
@@ -49,4 +59,5 @@ var smtpTransport = nodemailer.createTransport("SMTP", {
         }
     }
 });
+
 
