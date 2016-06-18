@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "wherecanwedance",
+  "private_key_id": "71044c4af5f03392704c3260b608903fc2377f73",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCdp+3hOw57GW0t\npN9T7lQ1FrRy8+W4S/KnO8T7Pfb8fGT+5c9QveaTfLpXGVHGFsvt0RLOgUtQFupY\n+yumGK+uhxI0yiQEVix1EEndx9Mu+q23ZajpeU3BT89Uu3ZRuqjzNM6+58WBHku0\nEeu0PptyiyTQTHxn2JK1ZQHA1ty9j8TbwI1/19n228/cpeYbkMxq0S+EUVKgG6m/\n3etMBZwxhubXGY+JmD25i0Zf+2Mrjw4ohz9b5yzfzReDCrEB0tU8TFT7YY67fLlV\nRvWOKGs8jcVYVoD0jDQjhvR/t99h/zyidk6FgN8Z6EjQQZDeaynHQvpIrboJnqGF\n3bidWjt9AgMBAAECggEAZ/o0KmK/tzJazkq5u+oogWb7FgGDlVwJqoAB902z0mvc\nVDyO0YqdQtJ1NzKMux+X2b4VMDsXx7eFUbA95mrLm0icGlLjFDUdVwuqG+pJfud3\noMgccfc97+vKKvEEJPz9poFChafom7K2bQmQsazE6vOYEQUQ25B7mcUHNf6/UQkw\nn/0WFbaZIMbd8uvIv+7aKkY8PuB+pdmZ5iJCsqyWsErx3A5wWwSNON3Fs94L735I\nRwonrIs6CF0FF0nkMvRVaYc3LjyAomn6GAUkOu7G1U1vDlejEt0R4Cv0c8omtRbY\nNxhufD8peCEi8IKf2Ggd6otzBUV81jFm9rKjkJKS4QKBgQDk//E0zYtk+BqGRSxR\npc99sDXbjptXxobgrM1cIV5Zhv8Vh6RJtGbT33xWMFGeFG/4QpyNhPYjQ9I4GHt6\ndl4/cOHKpNPCq1Z6jas9xKvxsoOH5H5SyUZ/c35mgGw8USahsQI+l7w5cwSSarOp\nCMFmrWVXC7EgRwf8JH4PLdWGKQKBgQCwPpFmVnrTzHoFNuxoGyOYadRhA0+jHqm2\nS4B4lV5BEVQOv07R2Cw3wSczUSht9pAKQ42hwVFu5CGBGCHer+/AwNceTdZjK9i5\nmCdT+d6LoHxYl4x6mvmU+0oG+K0X35C8jKHRcIP0TfqrMuZA5SnK82IjeU0dOU8c\nHpjGCpZtNQKBgAv1CUU2jlbBVbE5H21L+R+Y+dbzBU16AkTtAPQUkfaew+b95Cgt\nEUly2+0sLLbSXl5aLA5/qNKCkhF3xcrJL3akkEWigaQiiitwBkb9Y/UE2zVXSvlL\npTC2eR0lC4HCwv+iXHmkNqHRTaXPiH4FBQQ1fZsj8yW6T8JsrWBhhkqxAoGAJ5J0\n3TCPtZyUzTTu0dU+IcupVvsCV5Lb8kVznB+VoTB92i3UScOq8f3Zimkvlbkl0Fgo\npegdG7P3XeAIQtLoFzR1WKWLfIrsx4dFVVKmSF2Jbe7hKOpBHdVqYrRVUSXufpdp\nAfiseB9GKEhucKXDw4DwSRzEVsp2W8726IiaC/0CgYEAocxdhvgfoOe0+f9Fqpmv\n+B4onifYJpbVrdxQuDuou0V/s56xvBM00XEzjyEsm7ewfCwFc0eLwx5gY7mhEtgD\nwr7wzWUrXcFNRot38ywVGQfy/ox48k+3wJIUJDEShJJtye2V5OhpmhXX+RzQ7nV2\nvNLOLdDGGhQwGejDuyE3LU0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "wcwdemail-265@wherecanwedance.iam.gserviceaccount.com",
+  "client_id": "116696873256376617423",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/wcwdemail-265%40wherecanwedance.iam.gserviceaccount.com"
+}
