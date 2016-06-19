@@ -28,7 +28,7 @@ var user_ref = db.ref("/users");
 var event_ref = db.ref("/events");
 
 
-new CronJob('45 18 * * *', function () {
+new CronJob('50 18 * * *', function () {
     console.log('Job Started');
     var filtered_events = [];
 // get list of events which starts this week
