@@ -27,7 +27,7 @@ var user_ref = db.ref("/users");
 var event_ref = db.ref("/events");
 
 
-new CronJob('05 18 * * *', function () {
+new CronJob('28 18 * * *', function () {
     console.log('Job Started');
     var filtered_events = [];
 // get list of events which starts this week
@@ -102,10 +102,6 @@ new CronJob('05 18 * * *', function () {
                 }
 
                 if (id > 1) {
-                    console.log("notified_on: " + now);
-                    //update user has been notified
-                    var u_ref = user_ref.child(user_id);
-                    u_ref.update({notified_on: now});
                     smtpTransport.sendMail({
                         from: process.env.MY_EMAIL, // sender address
                         to: email, // receiver address
@@ -118,6 +114,10 @@ new CronJob('05 18 * * *', function () {
                             console.log("Message sent: " + response.message);
                         }
                     });
+                    console.log("notified_on: " + now);
+                    //update user has been notified
+                    var u_ref = user_ref.child(user_id);
+                    u_ref.update({notified_on: now});
                 }
             }
         });
