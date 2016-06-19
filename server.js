@@ -102,10 +102,10 @@ new CronJob('05 18 * * *', function () {
                 }
 
                 if (id > 1) {
-                    console.log("notified_on: " + user_details.next_notify_on);
+                    console.log("notified_on: " + now);
                     //update user has been notified
                     var u_ref = user_ref.child(user_id);
-                    u_ref.update({notified_on: user_details.next_notify_on});
+                    u_ref.update({notified_on: now});
                     smtpTransport.sendMail({
                         from: process.env.MY_EMAIL, // sender address
                         to: email, // receiver address
