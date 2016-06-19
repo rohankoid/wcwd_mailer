@@ -27,7 +27,7 @@ var user_ref = db.ref("/users");
 var event_ref = db.ref("/events");
 
 
-new CronJob('15 17 * * *', function () {
+new CronJob('05 18 * * *', function () {
     console.log('Job Started');
     var filtered_events = [];
 // get list of events which starts this week
@@ -100,21 +100,25 @@ new CronJob('15 17 * * *', function () {
                     }
 
                 }
-                //update user has been notified
-                var u_ref = user_ref.child(user_id);
-                u_ref.update({notified_on: user_details.next_notify_on});
-                smtpTransport.sendMail({
-                    from: process.env.MY_EMAIL, // sender address
-                    to: email, // receiver address
-                    subject: "Where can we dance this week??", // subject
-                    html: text // body
-                }, function (error, response) {
-                    if (error) {
-                        console.log(error);
-                    } else {
-                        console.log("Message sent: " + response.message);
-                    }
-                });
+
+                if (id > 1) {
+                    console.log("notified_on: " + user_details.next_notify_on);
+                    //update user has been notified
+                    var u_ref = user_ref.child(user_id);
+                    u_ref.update({notified_on: user_details.next_notify_on});
+                    smtpTransport.sendMail({
+                        from: process.env.MY_EMAIL, // sender address
+                        to: email, // receiver address
+                        subject: "Where can we dance this week??", // subject
+                        html: text // body
+                    }, function (error, response) {
+                        if (error) {
+                            console.log(error);
+                        } else {
+                            console.log("Message sent: " + response.message);
+                        }
+                    });
+                }
             }
         });
     });
