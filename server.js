@@ -8,12 +8,13 @@ var express = require('express'),
     config = require('./config'),
     moment = require('moment');
 
-app.set('port', (process.env.PORT || 5000));
+var port = (process.env.PORT || 5000);
+app.set('port', port);
 app.get('/', function (request, response) {
     var result = 'App is running'
     response.send(result);
-}).listen(function () {
-    console.log('App is running');
+}).listen(port, function () {
+    console.log('App is running on port: ' + port);
     //the rest of our app lives here, wrapped inside this function
 });
 
@@ -27,7 +28,7 @@ var user_ref = db.ref("/users");
 var event_ref = db.ref("/events");
 
 
-new CronJob('28 18 * * *', function () {
+new CronJob('40 18 * * *', function () {
     console.log('Job Started');
     var filtered_events = [];
 // get list of events which starts this week
